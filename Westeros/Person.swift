@@ -16,14 +16,6 @@ final class Person {
     
     var alias : String{
         get{
-            // Esto es un if que hace una asignación si se cumple
-//            if let theAlias = _alias{
-//                //nExiste! y está en theAlias
-//                return theAlias
-//            }else{
-//                return ""
-//            }
-            // Esto significa: me devuelves _alias si tiene algo y sino me devuelves ""
             return _alias ?? ""
         }
     }

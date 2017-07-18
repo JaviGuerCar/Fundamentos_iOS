@@ -64,6 +64,7 @@ extension House{
     
     // Sorted [Person]
     func sortedMembers() -> [Person]{
+        // Con sorted sobre el set te devuelve un Array ordenado. Para ello tenemos que implementar Comparable en Person
         return _members.sorted()
     }
     
