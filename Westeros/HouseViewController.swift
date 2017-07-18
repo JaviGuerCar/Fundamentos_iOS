@@ -42,13 +42,57 @@ class HouseViewController: UIViewController {
         wordsView.text = model.words
     }
     
+    // Añadimos con una función un botón a la barra del navigationController
+    func setupUI(){
+        // Tenemos que darle el texto al botón
+        let wikiBtn = UIBarButtonItem(title: "Wiki",
+                                      style: .plain,
+                                      target: self,
+                                      //Con selector llama a la funcion
+            action: #selector(displayWiki))
+        
+        // Añadimos otro Botón
+        let personBtn = UIBarButtonItem(title: "Members",
+                                      style: .plain,
+                                      target: self,
+                                      //Con selector llama a la funcion
+            action: #selector(displayPerson))
+        // Y lo añadimos con un NavigationItem,
+        // que es una propiedad de UIViewController
+        navigationItem.rightBarButtonItems = [wikiBtn, personBtn]
+        
+    }
+    
+    // Esta función se tiene que llamar con los métodos de ObjectiveC al llamarla con selector en el Botón, por
+    // culpa de que UIKit está implementado en OBJC
+    @objc func displayWiki(){
+        
+        // Creamos un WikiVC
+        let wikiVC = WikiViewController(model: model)
+        
+        // Lo cargamos en el navigation
+        navigationController?.pushViewController(wikiVC, animated: true)
+        
+    }
+    
+    @objc func displayPerson(){
+        
+        // Creamos un PersonsVC
+        let personsVC = PersonsTableViewController(model:model.sortedMembers())
+        
+        // lo cargamos en el Navigation
+        navigationController?.pushViewController(personsVC, animated: true)
+        
+    }
+    
     
     // en el método viewVillAppear llamamos a la función que sincroniza modelo y vista
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        
         syncViewWithModel()
+        //Otra funcion para configurar la vista
+        setupUI()
     }
 
 

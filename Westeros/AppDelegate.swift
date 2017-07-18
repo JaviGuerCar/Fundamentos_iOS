@@ -24,29 +24,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Creamos unos modelos
         let houses = Repository.local.houses
         
-        // Creamos los controladores
-//        var controllers = [UIViewController]()
-//        for house in houses{
-//            controllers.append(HouseViewController(model: house).wrappedInNavigation())
-//        }
-//        let starkVC = HouseViewController(model: starkHouse)
-//        let lannisterVC = HouseViewController(model: lannisterHouse)
-        
-        // Creamos los navigation (Ya no hace falta al haber creado el método WrappedInNavigation)
-        //        let starkNav = UINavigationController(rootViewController: starkVC)
-        //        let lannisterNav = UINavigationController(rootViewController: lannisterVC)
-        
-        
-        
-        // Creamos el Tab Bar
-        let tabVC = UITabBarController()
-        //tabVC.viewControllers = controllers
-        tabVC.viewControllers = houses.map{HouseViewController(model: $0).wrappedInNavigation()}
-//        tabVC.viewControllers = [starkVC.wrappedInNavigation(), lannisterVC.wrappedInNavigation()]
-        
+        // Creamos la tabla
+        let housesVC = HousesTableViewController(model: houses).wrappedInNavigation()
         
         // Le asignamos el RootVC
-        window?.rootViewController = tabVC
+        window?.rootViewController = housesVC
         
         return true
     }

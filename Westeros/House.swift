@@ -18,12 +18,13 @@ final class House {
     let name    : String
     let sigil   : Sigil
     let words   : Words
+    let wikiURL : URL
     private var _members : Members
     
     // Hay que crear un inicializador
-    init (name: String, sigil: Sigil, words: Words){
+    init (name: String, sigil: Sigil, words: Words, wikiURL: URL){
         // Usamos Pattern Matching
-        (self.name, self.sigil, self.words) = (name, sigil, words)
+        (self.name, self.sigil, self.words, self.wikiURL) = (name, sigil, words, wikiURL)
         _members = Members()
     }
 }
@@ -51,6 +52,24 @@ extension House{
             return
         }
         _members.insert(person)
+    }
+    
+    // Variadic version //Sobreescribimos la función Add
+    // Person... puede recibir varios parámetro
+    func add(persons: Person...){
+        for person in persons{
+            add(person: person)
+        }
+    }
+    
+    // Sorted [Person]
+    func sortedMembers() -> [Person]{
+        return _members.sorted()
+    }
+    
+    
+    func getPerson(named: String) -> Person? {
+        return (_members.filter { $0.name == named ? true : false }).first
     }
     
 }
