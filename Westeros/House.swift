@@ -47,7 +47,7 @@ extension House{
     }
     
     func add(person: Person){
-        // Para validar parámetros utilizamos Guard
+        // Para validar parámetros utilizamos Guard que es como un if pero con más cosas
         guard person.house.name == self.name else {
             return
         }
@@ -90,6 +90,7 @@ extension House {
     }
 }
 
+// Implementamos los protocolos
 // MARK: - Equatable
 extension House : Equatable {
     static func == (lhs: House, rhs: House) -> Bool {
@@ -97,7 +98,6 @@ extension House : Equatable {
     }
 }
 
-// Implementamos los protocolos
 // MARK: - Hashable
 extension House : Hashable {
     var hashValue: Int {

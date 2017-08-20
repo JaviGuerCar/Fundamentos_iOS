@@ -14,6 +14,7 @@ final class Person {
     let house   : House
     private let _alias   : String?
     
+    // está variable te devuelve un string vacío para cuando un personaje no tenga alias
     var alias : String{
         get{
             return _alias ?? ""
@@ -43,7 +44,7 @@ extension Person {
 }
 
 extension Person {
-    // Creamos un proxy que represnta el objeto y que averigue el hash
+    // Creamos un proxy que representa el objeto y que averigue el hash
     var proxy : String{
         return "\(name) \(alias) \(house.name)"
     }

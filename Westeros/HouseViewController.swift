@@ -43,7 +43,7 @@ class HouseViewController: UIViewController {
     }
     
     // Añadimos con una función un botón a la barra del navigationController
-    func setupUI(){
+    func addButtons(){
         // Tenemos que darle el texto al botón
         let wikiBtn = UIBarButtonItem(title: "Wiki",
                                       style: .plain,
@@ -92,7 +92,7 @@ class HouseViewController: UIViewController {
         
         syncViewWithModel()
         //Otra funcion para configurar la vista
-        setupUI()
+        addButtons()
     }
 
 

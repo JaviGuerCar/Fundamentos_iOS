@@ -22,26 +22,35 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="spx-Le-h3s">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mBH-E7-ZxS">
-                    <rect key="frame" x="16" y="66" width="343" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mBH-E7-ZxS">
+                    <rect key="frame" x="20" y="70" width="335" height="26"/>
                     <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="22"/>
                     <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tou-oS-R5r">
-                    <rect key="frame" x="16" y="626" width="343" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tou-oS-R5r">
+                    <rect key="frame" x="20" y="628" width="335" height="19"/>
                     <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="16"/>
                     <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="spx-Le-h3s">
+                    <rect key="frame" x="0.0" y="148" width="375" height="371"/>
+                </imageView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="mBH-E7-ZxS" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" symbolic="YES" id="2Ud-62-2N1"/>
+                <constraint firstItem="spx-Le-h3s" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="6Oe-2a-cej"/>
+                <constraint firstAttribute="trailing" secondItem="Tou-oS-R5r" secondAttribute="trailing" constant="20" symbolic="YES" id="IJL-ok-OfV"/>
+                <constraint firstItem="Tou-oS-R5r" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" symbolic="YES" id="JMU-6L-94G"/>
+                <constraint firstAttribute="trailing" secondItem="mBH-E7-ZxS" secondAttribute="trailing" constant="20" symbolic="YES" id="VKK-FW-F9b"/>
+                <constraint firstAttribute="bottom" secondItem="Tou-oS-R5r" secondAttribute="bottom" constant="20" symbolic="YES" id="brg-j4-Obb"/>
+                <constraint firstItem="spx-Le-h3s" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="g2T-KP-dQn"/>
+                <constraint firstItem="spx-Le-h3s" firstAttribute="top" secondItem="mBH-E7-ZxS" secondAttribute="bottom" constant="52" id="gyZ-vP-qzW"/>
+                <constraint firstItem="mBH-E7-ZxS" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="70" id="lWX-TB-Vr4"/>
+                <constraint firstItem="spx-Le-h3s" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="nce-ju-iDe"/>
+            </constraints>
             <point key="canvasLocation" x="33.5" y="53.5"/>
         </view>
     </objects>

@@ -28,12 +28,7 @@ final class ArrayDataSource<Element> : NSObject, UITableViewDataSource {
         super.init()
     }
     
-    // Todo DataSource como mínimo implementa estos tres métodos
-    
-    // numero de secciones
-//    func numberOfSections(in tableView: UITableView) -> Int {
-//        return 1
-//    }
+    // Todo TableViewDataSource como mínimo implementa estos métodos
     
     // numero de celdas en seccion
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -44,7 +39,9 @@ final class ArrayDataSource<Element> : NSObject, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
+        // Averiguamos que celda nos piden
         let elem = _model[indexPath.row]
+        // Devolvemos la clausura, que en realidad devuelve la celda, que requiere de un elemento y un tableView
         return _cellMaker(elem, tableView)
     }
 
