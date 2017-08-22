@@ -53,6 +53,12 @@ extension Season{
         }
         
     }
+    
+    // Sorted [Episode]
+    func sortedEpisodes() -> [Episode]{
+        // Con sorted sobre el set te devuelve un Array ordenado.
+        return _episodes.sorted()
+    }
 }
 
 // Implementamos los protocolos

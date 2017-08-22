@@ -1,21 +1,21 @@
 //
-//  HousesTableViewController.swift
+//  SeasonsTableViewController.swift
 //  Westeros
 //
-//  Created by Fco. Javier Guerrero Carmona on 18/7/17.
+//  Created by Fco. Javier Guerrero Carmona on 21/8/17.
 //  Copyright © 2017 Keepcoding. All rights reserved.
 //
 
 import UIKit
 
-class HousesTableViewController: UITableViewController {
+class SeasonsTableViewController: UITableViewController {
         
-    let model : [House]
+    let model : [Season]
     
-    init(model: [House]) {
+    init(model: [Season]){
         self.model = model
         super.init(nibName: nil, bundle: nil)
-        self.title = "Westeros"
+        self.title = "Seasons"
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -23,54 +23,56 @@ class HousesTableViewController: UITableViewController {
     }
 
     // MARK: - Table view data source
-    
-    // Numero de secciones
+
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
-    // Numero de filas en seccion
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return model.count
     }
 
-    // Método que devuelve la celda
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        // Descubrimos cual es la casa a mostrar
-        let house = model[indexPath.row]
+        // Descubrimos la season a mostrar
+        let season = model[indexPath.row]
         
-        // Creamos un identificador para la celda
-        let cellID = "HouseCell"
+        // Creamos un ID para la celda
+        let cellID = "SeasonCell"
         
         // Le pedimos al tableView que nos de una celda reusada
         var cell = tableView.dequeueReusableCell(withIdentifier: cellID)
         
-        // Sino la tiene la creamos a pelo
+        // Si no tiene la celda, la creamos
         if cell == nil {
             cell = UITableViewCell(style: .subtitle, reuseIdentifier: cellID)
         }
         
-        // Sincronizamos House y Celda
-        cell?.imageView?.image = house.sigil.image
-        cell?.textLabel?.text = house.name
-        cell?.detailTextLabel?.text = "\(house.count) members"
+        // Sincronizamos vista y celda
+        // Formateo de fechas
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd-MM-yyyy"
         
-        // Devolvemos la celda si o si
+        cell?.textLabel?.text = season.name
+        cell?.detailTextLabel?.text = dateFormatter.string(from: season.releaseDate)
+        
+        // Devolvemos la celda
         return cell!
+        
     }
     
+
     // MARK: - Table view delegate
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         // Descubrimos cual es la casa a mostrar
-        let house = model[indexPath.row]
+        let season = model[indexPath.row]
         
         // La mostramos
-        let houseVC = HouseViewController(model: house)
-        navigationController?.pushViewController(houseVC, animated: true)
+        let seasonVC = SeasonViewController(model: season)
+        navigationController?.pushViewController(seasonVC, animated: true)
     }
     
 }

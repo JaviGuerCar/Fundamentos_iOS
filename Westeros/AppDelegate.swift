@@ -23,17 +23,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Creamos unos modelos
         let houses = Repository.local.houses
+        let seasons = Repository.local.seasons
         
         // Creamos los controladores
-        let dataSource = DataSources.houseDataSource(model: houses)
-        let miDelegate = Delegates.housesDelegate(model: houses)
+        //let dataSource = DataSources.houseDataSource(model: houses)
+        //let miDelegate = Delegates.housesDelegate(model: houses)
         
-        let housesVC = ArrayTableViewController(dataSource: dataSource, miDelegate: miDelegate, title: "Westeros", style: .plain).wrappedInNavigation()
+        //let housesVC = ArrayTableViewController(dataSource: dataSource, miDelegate: miDelegate, title: "Westeros", style: .plain).wrappedInNavigation()
         //let housesVC = HousesTableViewController(model: houses).wrappedInNavigation()
         
+        // Creamos las tablas
+        //let housesVC = HousesTableViewController(model: houses).wrappedInNavigation()
+        let seasonsVC = SeasonsTableViewController(model: seasons).wrappedInNavigation()
         
         // Le asignamos el RootVC
-        window?.rootViewController = housesVC
+        window?.rootViewController = seasonsVC
         
         return true
     }

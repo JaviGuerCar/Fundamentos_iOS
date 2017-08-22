@@ -12,6 +12,12 @@
 		5D01F0AF1F15622800EF0EA3 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D01F0AE1F15622800EF0EA3 /* Repository.swift */; };
 		5D3280A11F47621D00E274B6 /* EpisodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3280A01F47621D00E274B6 /* EpisodeTests.swift */; };
 		5D3280A31F47681C00E274B6 /* Episode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3280A21F47681C00E274B6 /* Episode.swift */; };
+		5D3280A61F4A369B00E274B6 /* SeasonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3280A41F4A369B00E274B6 /* SeasonViewController.swift */; };
+		5D3280A71F4A369B00E274B6 /* SeasonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D3280A51F4A369B00E274B6 /* SeasonViewController.xib */; };
+		5D3280AA1F4B8BD500E274B6 /* SeasonsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3280A81F4B8BD500E274B6 /* SeasonsTableViewController.swift */; };
+		5D3280AB1F4B8BD500E274B6 /* SeasonsTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D3280A91F4B8BD500E274B6 /* SeasonsTableViewController.xib */; };
+		5D3280AE1F4CA7F600E274B6 /* EpisodesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3280AC1F4CA7F600E274B6 /* EpisodesTableViewController.swift */; };
+		5D3280AF1F4CA7F600E274B6 /* EpisodesTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D3280AD1F4CA7F600E274B6 /* EpisodesTableViewController.xib */; };
 		5D7B7AFE1F431552006C25B3 /* Season.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7B7AFD1F431552006C25B3 /* Season.swift */; };
 		5D7F71C81F1412C600F8FA39 /* HouseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7F71C61F1412C600F8FA39 /* HouseViewController.swift */; };
 		5D7F71C91F1412C600F8FA39 /* HouseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D7F71C71F1412C600F8FA39 /* HouseViewController.xib */; };
@@ -56,6 +62,12 @@
 		5D01F0AE1F15622800EF0EA3 /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		5D3280A01F47621D00E274B6 /* EpisodeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EpisodeTests.swift; sourceTree = "<group>"; };
 		5D3280A21F47681C00E274B6 /* Episode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Episode.swift; sourceTree = "<group>"; };
+		5D3280A41F4A369B00E274B6 /* SeasonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeasonViewController.swift; sourceTree = "<group>"; };
+		5D3280A51F4A369B00E274B6 /* SeasonViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SeasonViewController.xib; sourceTree = "<group>"; };
+		5D3280A81F4B8BD500E274B6 /* SeasonsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeasonsTableViewController.swift; sourceTree = "<group>"; };
+		5D3280A91F4B8BD500E274B6 /* SeasonsTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SeasonsTableViewController.xib; sourceTree = "<group>"; };
+		5D3280AC1F4CA7F600E274B6 /* EpisodesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EpisodesTableViewController.swift; sourceTree = "<group>"; };
+		5D3280AD1F4CA7F600E274B6 /* EpisodesTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EpisodesTableViewController.xib; sourceTree = "<group>"; };
 		5D7B7AFD1F431552006C25B3 /* Season.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Season.swift; sourceTree = "<group>"; };
 		5D7F71C61F1412C600F8FA39 /* HouseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HouseViewController.swift; sourceTree = "<group>"; };
 		5D7F71C71F1412C600F8FA39 /* HouseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HouseViewController.xib; sourceTree = "<group>"; };
@@ -122,6 +134,12 @@
 				5D7F71C71F1412C600F8FA39 /* HouseViewController.xib */,
 				5DE685401F1E79EE000325A4 /* WikiViewController.swift */,
 				5DE685411F1E79EE000325A4 /* WikiViewController.xib */,
+				5D3280A41F4A369B00E274B6 /* SeasonViewController.swift */,
+				5D3280A51F4A369B00E274B6 /* SeasonViewController.xib */,
+				5D3280A81F4B8BD500E274B6 /* SeasonsTableViewController.swift */,
+				5D3280A91F4B8BD500E274B6 /* SeasonsTableViewController.xib */,
+				5D3280AC1F4CA7F600E274B6 /* EpisodesTableViewController.swift */,
+				5D3280AD1F4CA7F600E274B6 /* EpisodesTableViewController.xib */,
 				5DE685441F1E7DA1000325A4 /* HousesTableViewController.swift */,
 				5DE685451F1E7DA1000325A4 /* HousesTableViewController.xib */,
 				5DE685481F1E8609000325A4 /* PersonsTableViewController.swift */,
@@ -320,8 +338,11 @@
 				ED853EF21F0C47E100F04AD6 /* LaunchScreen.storyboard in Resources */,
 				5DE685471F1E7DA1000325A4 /* HousesTableViewController.xib in Resources */,
 				5D7F71C91F1412C600F8FA39 /* HouseViewController.xib in Resources */,
+				5D3280A71F4A369B00E274B6 /* SeasonViewController.xib in Resources */,
 				ED853EEF1F0C47E100F04AD6 /* Assets.xcassets in Resources */,
+				5D3280AB1F4B8BD500E274B6 /* SeasonsTableViewController.xib in Resources */,
 				5D8FD68D1F0EC88200BC14E7 /* codeIsComing.png in Resources */,
+				5D3280AF1F4CA7F600E274B6 /* EpisodesTableViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +362,7 @@
 			files = (
 				5DE685511F1EA9EA000325A4 /* ArrayTableViewController.swift in Sources */,
 				5D3280A31F47681C00E274B6 /* Episode.swift in Sources */,
+				5D3280AA1F4B8BD500E274B6 /* SeasonsTableViewController.swift in Sources */,
 				5DE6854D1F1E99E1000325A4 /* ArrayDataSource.swift in Sources */,
 				5DE6855A1F1EB124000325A4 /* Delegates.swift in Sources */,
 				5DE685561F1EB02D000325A4 /* ArrayTableViewDelegate.swift in Sources */,
@@ -350,11 +372,13 @@
 				5D7B7AFE1F431552006C25B3 /* Season.swift in Sources */,
 				ED853EE81F0C47E100F04AD6 /* AppDelegate.swift in Sources */,
 				5D7F71C81F1412C600F8FA39 /* HouseViewController.swift in Sources */,
+				5D3280AE1F4CA7F600E274B6 /* EpisodesTableViewController.swift in Sources */,
 				5D01F0AB1F155DA700EF0EA3 /* UIKitExtensions.swift in Sources */,
 				5D01F0AF1F15622800EF0EA3 /* Repository.swift in Sources */,
 				5DE685421F1E79EE000325A4 /* WikiViewController.swift in Sources */,
 				5DE685541F1EAB82000325A4 /* DataSources.swift in Sources */,
 				5DE6854A1F1E8609000325A4 /* PersonsTableViewController.swift in Sources */,
+				5D3280A61F4A369B00E274B6 /* SeasonViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
