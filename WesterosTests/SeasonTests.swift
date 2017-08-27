@@ -32,8 +32,8 @@ class SeasonTests: XCTestCase {
         let dateS2 = formatter.date(from: "2012/04/01")
         
         // Me creo algunas Seasons
-        season1 = Season(name: "S1", releaseDate: dateS1!)
-        season2 = Season(name: "S2", releaseDate: dateS2!)
+        season1 = Season(name: "S1", releaseDate: dateS1!, image: #imageLiteral(resourceName: "got_s1.jpg"))
+        season2 = Season(name: "S2", releaseDate: dateS2!, image: #imageLiteral(resourceName: "got_s2.jpg"))
         
         // Me creo algunos Episodes
         ep1s1 = Episode(title: "Episode1 Season1", issueDate: dateS1!, season: season1)
@@ -62,7 +62,7 @@ class SeasonTests: XCTestCase {
         // Igualdad
         formatter.dateFormat = "yyyy/MM/dd"
         let dateS1 = formatter.date(from: "2011/05/01")
-        let season235 = Season(name: "S1", releaseDate: dateS1!)
+        let season235 = Season(name: "S1", releaseDate: dateS1!, image: #imageLiteral(resourceName: "got_s1.jpg"))
         XCTAssertEqual(season1, season235)
         
         // Desigualdad

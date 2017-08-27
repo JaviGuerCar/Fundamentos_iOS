@@ -29,8 +29,8 @@ class HouseTests: XCTestCase {
     override func setUp() {
         super.setUp()
         
-        starkImage = #imageLiteral(resourceName: "codeIsComing.png")
-        lannisterImage = #imageLiteral(resourceName: "lannister.jpg")
+        starkImage = #imageLiteral(resourceName: "house_stark.png")
+        lannisterImage = #imageLiteral(resourceName: "house_lannister.png")
         
         starkSigil = Sigil(image: starkImage, description: "Direwolf")
         lannisterSigil = Sigil(image: lannisterImage, description: "Rampant Lion")
@@ -59,10 +59,10 @@ class HouseTests: XCTestCase {
     }
     
     func testSigilExistence(){
-        let starkSigil = Sigil(image: #imageLiteral(resourceName: "codeIsComing.png"), description: "Direwolf")
+        let starkSigil = Sigil(image: #imageLiteral(resourceName: "house_stark.png"), description: "Direwolf")
         XCTAssertNotNil(starkSigil)
         
-        let lannisterSigil = Sigil(image: #imageLiteral(resourceName: "lannister.jpg"), description: "Rampant Lion")
+        let lannisterSigil = Sigil(image: #imageLiteral(resourceName: "house_lannister.png"), description: "Rampant Lion")
         XCTAssertNotNil(lannisterSigil)
         
     }

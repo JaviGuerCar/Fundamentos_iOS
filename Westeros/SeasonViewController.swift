@@ -12,6 +12,8 @@ class SeasonViewController: UIViewController {
     @IBOutlet weak var seasonView: UILabel!
 
     @IBOutlet weak var dateView: UILabel!
+    @IBOutlet weak var imageView: UIImageView!
+    
     // Creamos una variable que defina el modelo
     let model : Season
     
@@ -37,6 +39,7 @@ class SeasonViewController: UIViewController {
         
         seasonView.text = model.name
         dateView.text = dateFormatter.string(from: model.releaseDate)
+        imageView.image = model.image
     }
     
     override func viewWillAppear(_ animated: Bool) {

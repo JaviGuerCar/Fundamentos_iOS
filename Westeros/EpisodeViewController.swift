@@ -10,26 +10,62 @@ import UIKit
 
 class EpisodeViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBOutlet weak var titleViewLabel: UILabel!
+    @IBOutlet weak var dateViewLabel: UILabel!
+    @IBOutlet weak var synopsisViewLabel: UILabel!
+    
+    let model : Episode
+    
+    init(model: Episode){
+        self.model = model
+        super.init(nibName: nil, bundle: nil)
+        self.title = model.title
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
-    */
+    
+    func addButton(){
+        // Creo el botón
+        let personBtn = UIBarButtonItem(title: "Persons",
+                                         style: .plain,
+                                         target: self,
+                                         action: #selector(displayPersons))
+        
+        //añado el boton al Navigationitem
+        navigationItem.rightBarButtonItem = personBtn
+    }
+    
+    @objc func displayPersons(){
+        
+        // Creamos un PersonsVC
+        let personsVC = PersonsTableViewController(model:model.sortedMembers())
+        
+        // lo cargamos en el Navigation
+        navigationController?.pushViewController(personsVC, animated: true)
+        
+    }
+    
+    func syncModelWithView(){
+        
+        // Formateo de fechas
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd-MM-yyyy"
+        
+        titleViewLabel.text = model.title
+        dateViewLabel.text = dateFormatter.string(from: model.issueDate)
+        synopsisViewLabel.text = model.synopsis
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        // llamo a la funcion de sincronización
+        syncModelWithView()
+        addButton()
+        
+    }
+    
 
 }

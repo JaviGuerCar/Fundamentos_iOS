@@ -57,6 +57,7 @@ class SeasonsTableViewController: UITableViewController {
         
         cell?.textLabel?.text = season.name
         cell?.detailTextLabel?.text = dateFormatter.string(from: season.releaseDate)
+        cell?.imageView?.image = season.image
         
         // Devolvemos la celda
         return cell!

@@ -63,6 +63,17 @@ class EpisodesTableViewController: UITableViewController {
         
         return cell!
     }
+    
+    // MARK: - Table view delegate
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        // Descubrimos cual es la casa a mostrar
+        let episode = model[indexPath.row]
+        
+        // La mostramos
+        let episodeVC = EpisodeViewController(model: episode)
+        navigationController?.pushViewController(episodeVC, animated: true)
+    }
  
     
 }

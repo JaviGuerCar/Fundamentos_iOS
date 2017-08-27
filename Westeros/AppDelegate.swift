@@ -32,12 +32,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //let housesVC = ArrayTableViewController(dataSource: dataSource, miDelegate: miDelegate, title: "Westeros", style: .plain).wrappedInNavigation()
         //let housesVC = HousesTableViewController(model: houses).wrappedInNavigation()
         
-        // Creamos las tablas
-        //let housesVC = HousesTableViewController(model: houses).wrappedInNavigation()
+        // Creamos los TablesViewControllers empaquetados en un NavigationController
+        let housesVC = HousesTableViewController(model: houses).wrappedInNavigation()
         let seasonsVC = SeasonsTableViewController(model: seasons).wrappedInNavigation()
         
+        
+        // Creamos el TabBar
+        let tabVC = UITabBarController()
+        tabVC.viewControllers = [housesVC, seasonsVC]
+        
         // Le asignamos el RootVC
-        window?.rootViewController = seasonsVC
+        window?.rootViewController = tabVC
         
         return true
     }

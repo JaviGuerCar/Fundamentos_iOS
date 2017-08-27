@@ -15,7 +15,7 @@ class HousesTableViewController: UITableViewController {
     init(model: [House]) {
         self.model = model
         super.init(nibName: nil, bundle: nil)
-        self.title = "Westeros"
+        self.title = "Houses"
     }
     
     required init?(coder aDecoder: NSCoder) {

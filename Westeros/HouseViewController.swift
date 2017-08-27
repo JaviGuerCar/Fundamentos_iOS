@@ -35,6 +35,7 @@ class HouseViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    
     // sincroniza modelo y vista
     func syncViewWithModel(){
         houseNameView.text = "House \(model.name)"

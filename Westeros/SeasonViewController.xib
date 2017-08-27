@@ -12,7 +12,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SeasonViewController" customModule="Westeros" customModuleProvider="target">
             <connections>
                 <outlet property="dateView" destination="Y9f-DF-jka" id="v3T-aj-389"/>
-                <outlet property="seasonView" destination="JVW-GF-4b3" id="BYU-6x-haX"/>
+                <outlet property="imageView" destination="m7c-Y9-U0u" id="gYV-XJ-aGc"/>
+                <outlet property="seasonView" destination="JVW-GF-4b3" id="gYl-nm-xUi"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -23,27 +24,36 @@
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Season" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JVW-GF-4b3">
                     <rect key="frame" x="20" y="65" width="335" height="44"/>
-                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="37"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="HMH-RP-YOv"/>
+                        <constraint firstAttribute="width" constant="335" id="iqx-Jy-63G"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="30"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y9f-DF-jka">
-                    <rect key="frame" x="20" y="117" width="335" height="24"/>
+                    <rect key="frame" x="20" y="107" width="335" height="24"/>
                     <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="m7c-Y9-U0u">
+                    <rect key="frame" x="16" y="139" width="339" height="482"/>
+                </imageView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="Y9f-DF-jka" firstAttribute="top" secondItem="JVW-GF-4b3" secondAttribute="bottom" constant="8" symbolic="YES" id="8bq-Yw-AZA"/>
-                <constraint firstItem="JVW-GF-4b3" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Ctf-mE-H6Y"/>
-                <constraint firstAttribute="trailing" secondItem="Y9f-DF-jka" secondAttribute="trailing" constant="20" symbolic="YES" id="Ex9-uH-nkL"/>
-                <constraint firstItem="JVW-GF-4b3" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" symbolic="YES" id="KEf-Ce-OnI"/>
-                <constraint firstItem="Y9f-DF-jka" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Oyl-ZL-DBf"/>
-                <constraint firstAttribute="trailing" secondItem="JVW-GF-4b3" secondAttribute="trailing" constant="20" symbolic="YES" id="bNe-YE-ZYb"/>
-                <constraint firstItem="Y9f-DF-jka" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" symbolic="YES" id="dn6-qr-6pa"/>
-                <constraint firstItem="JVW-GF-4b3" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="65" id="u2a-m1-9x1"/>
+                <constraint firstItem="Y9f-DF-jka" firstAttribute="top" secondItem="JVW-GF-4b3" secondAttribute="bottom" constant="-2" id="0FZ-db-0hF"/>
+                <constraint firstItem="Y9f-DF-jka" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="5Cu-s5-Ihm"/>
+                <constraint firstAttribute="trailing" secondItem="JVW-GF-4b3" secondAttribute="trailing" constant="20" id="7DW-28-0uj"/>
+                <constraint firstItem="JVW-GF-4b3" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="C0s-3a-dnF"/>
+                <constraint firstAttribute="trailing" secondItem="Y9f-DF-jka" secondAttribute="trailing" constant="20" id="PxF-UT-C34"/>
+                <constraint firstItem="m7c-Y9-U0u" firstAttribute="top" secondItem="Y9f-DF-jka" secondAttribute="bottom" constant="8" id="Sfg-Rg-TVd"/>
+                <constraint firstItem="m7c-Y9-U0u" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="TpY-fI-CdB"/>
+                <constraint firstAttribute="bottom" secondItem="m7c-Y9-U0u" secondAttribute="bottom" constant="46" id="ccp-yI-5sd"/>
+                <constraint firstItem="JVW-GF-4b3" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="65" id="kM2-lS-3Bj"/>
+                <constraint firstAttribute="trailing" secondItem="m7c-Y9-U0u" secondAttribute="trailing" constant="20" id="zuV-j5-79a"/>
             </constraints>
             <point key="canvasLocation" x="77.5" y="53.5"/>
         </view>
