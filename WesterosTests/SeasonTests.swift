@@ -36,9 +36,9 @@ class SeasonTests: XCTestCase {
         season2 = Season(name: "S2", releaseDate: dateS2!, image: #imageLiteral(resourceName: "got_s2.jpg"))
         
         // Me creo algunos Episodes
-        ep1s1 = Episode(title: "Episode1 Season1", issueDate: dateS1!, season: season1)
-        ep2s1 = Episode(title: "Episode2 Season1", issueDate: dateS1!, season: season1)
-        ep1s2 = Episode(title: "Episode1 Season2", issueDate: dateS2!, season: season2)
+        ep1s1 = Episode(title: "Episode1 Season1", issueDate: dateS1!, season: season1, synopsis: "Synopsis Ep1S1")
+        ep2s1 = Episode(title: "Episode2 Season1", issueDate: dateS1!, season: season1, synopsis: "Synopsis Ep2S1")
+        ep1s2 = Episode(title: "Episode1 Season2", issueDate: dateS2!, season: season2, synopsis: "Synopsis Ep1S2")
         
     }
     

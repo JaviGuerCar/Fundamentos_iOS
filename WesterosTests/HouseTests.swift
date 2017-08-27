@@ -51,7 +51,7 @@ class HouseTests: XCTestCase {
 
     // Lo primero es que exista esa casa
     func testHouseExistence(){
-        let starkSigil = Sigil(image: #imageLiteral(resourceName: "codeIsComing.png"), description: "Direwolf")
+        let starkSigil = Sigil(image: #imageLiteral(resourceName: "house_stark.png"), description: "Direwolf")
         
         let stark = House(name: "Stark", sigil: starkSigil, words: "Winter is coming!",wikiURL:URL(string:"http://awoiaf.westeros.org/index.php/House_Stark")!)
         

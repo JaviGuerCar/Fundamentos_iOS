@@ -30,8 +30,8 @@ class PersonTest: XCTestCase {
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
-        starkImage = #imageLiteral(resourceName: "codeIsComing.png")
-        lannisterImage = #imageLiteral(resourceName: "lannister.jpg")
+        starkImage = #imageLiteral(resourceName: "house_stark.png")
+        lannisterImage = #imageLiteral(resourceName: "house_lannister.png")
         
         starkSigil = Sigil(image: starkImage, description: "Direwolf")
         lannisterSigil = Sigil(image: lannisterImage, description: "Rampant Lion")

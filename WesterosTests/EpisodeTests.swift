@@ -33,8 +33,8 @@ class EpisodeTests: XCTestCase {
         season2 = Season(name: "S2", releaseDate: dateS2!, image: #imageLiteral(resourceName: "got_s2.jpg"))
         
         // Me creo algunos Episodes
-        ep1s1 = Episode(title: "Episode1 Season1", issueDate: dateS1!, season: season1)
-        ep2s1 = Episode(title: "Episode2 Season1", issueDate: dateS1!, season: season1)    }
+        ep1s1 = Episode(title: "Episode1 Season1", issueDate: dateS1!, season: season1, synopsis: "Synopsis Ep1S1")
+        ep2s1 = Episode(title: "Episode2 Season1", issueDate: dateS1!, season: season1, synopsis: "Synopsis Ep2S2")    }
     
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
