@@ -53,4 +53,59 @@ final class DataSources{
         })
     }
     
+    // Ahora creo la función para la clase Season
+    static func seasonDataSources(model: [Season]) -> ArrayDataSource<Season>{
+        return ArrayDataSource(model: model, cellMaker: { (season: Season, tableView: UITableView) -> UITableViewCell in
+            
+            // Creo la ID de la celda
+            let cellID = "Season"
+            
+            // Busco una celda reusada de una tabla y sino la creo
+            var cell = tableView.dequeueReusableCell(withIdentifier: cellID)
+            if cell == nil{
+                cell = UITableViewCell(style: .subtitle, reuseIdentifier: cellID)
+            }
+            
+            // Sincronizamos vista y celda
+            // Formateo de fechas
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "dd-MM-yyyy"
+            
+            cell?.textLabel?.text = season.name
+            cell?.detailTextLabel?.text = dateFormatter.string(from: season.releaseDate)
+            cell?.imageView?.image = season.image
+            
+            // Devolvemos la celda
+            return cell!
+            
+        })
+    }
+    
+    // Ahora creo la función para la clase Episode
+    static func episodeDataSources(model: [Episode]) -> ArrayDataSource<Episode>{
+        return ArrayDataSource(model: model, cellMaker: { (episode: Episode, tableView: UITableView) -> UITableViewCell in
+            
+            // Creo la ID de la celda
+            let cellID = "Season"
+            
+            // Busco una celda reusada de una tabla y sino la creo
+            var cell = tableView.dequeueReusableCell(withIdentifier: cellID)
+            if cell == nil{
+                cell = UITableViewCell(style: .subtitle, reuseIdentifier: cellID)
+            }
+            
+            // Sincronizamos vista y celda
+            // Formateo de fechas
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "dd-MM-yyyy"
+            
+            // Sincronizamos la vista y celda
+            cell?.textLabel?.text = episode.title
+            cell?.detailTextLabel?.text = dateFormatter.string(from: episode.issueDate)
+            // Devolvemos la celda
+            return cell!
+            
+        })
+    }
+    
 }

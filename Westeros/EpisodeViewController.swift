@@ -39,8 +39,14 @@ class EpisodeViewController: UIViewController {
     
     @objc func displayPersons(){
         
+        // Primero creamos un DataSource de Person
+        let personDataSource = DataSources.personDataSources(model: model.sortedMembers())
+        
         // Creamos un PersonsVC
-        let personsVC = PersonsTableViewController(model:model.sortedMembers())
+        let personsVC = ArrayTableViewController(dataSource: personDataSource,
+                                                 delegate: nil,
+                                                 title: "Persons",
+                                                 style: .plain)
         
         // lo cargamos en el Navigation
         navigationController?.pushViewController(personsVC, animated: true)

@@ -26,15 +26,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let seasons = Repository.local.seasons
         
         // Creamos los controladores
-        //let dataSource = DataSources.houseDataSource(model: houses)
-        //let miDelegate = Delegates.housesDelegate(model: houses)
-        
-        //let housesVC = ArrayTableViewController(dataSource: dataSource, miDelegate: miDelegate, title: "Westeros", style: .plain).wrappedInNavigation()
-        //let housesVC = HousesTableViewController(model: houses).wrappedInNavigation()
+        let dataSource = DataSources.houseDataSources(model: houses)
+        let dataSourceSeason = DataSources.seasonDataSources(model: seasons)
         
         // Creamos los TablesViewControllers empaquetados en un NavigationController
-        let housesVC = HousesTableViewController(model: houses).wrappedInNavigation()
-        let seasonsVC = SeasonsTableViewController(model: seasons).wrappedInNavigation()
+        let housesVC = ArrayTableViewController(dataSource: dataSource,
+                                                delegate: HousesDelegate(),
+                                                title: "Houses",
+                                                style: .plain).wrappedInNavigation()
+        
+        let seasonsVC = ArrayTableViewController(dataSource: dataSourceSeason,
+                                                 delegate: SeasonsDelegate(),
+                                                 title: "Seasons",
+                                                 style: .plain).wrappedInNavigation()
+        
+        //let seasonsVC = SeasonsTableViewController(model: seasons).wrappedInNavigation()
         
         
         // Creamos el TabBar

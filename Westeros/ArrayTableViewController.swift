@@ -14,7 +14,7 @@ class ArrayTableViewController<Element>: UITableViewController{
     let delegate: BaseViewControllerDelegate<Element>?
     
     init(dataSource: ArrayDataSource<Element>,
-         delegate: BaseViewControllerDelegate<Element>,
+         delegate: BaseViewControllerDelegate<Element>? = nil,
          title: String, style: UITableViewStyle){
         
         self.dataSource = dataSource

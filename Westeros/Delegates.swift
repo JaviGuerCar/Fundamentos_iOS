@@ -16,7 +16,8 @@ class BaseViewControllerDelegate<Element>: NSObject{
     
 }
 
-final class GreatHousesDelegate: BaseViewControllerDelegate<House>, UITableViewDelegate{
+// Creo el delegado para Houses
+final class HousesDelegate: BaseViewControllerDelegate<House>, UITableViewDelegate{
     
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
@@ -25,6 +26,34 @@ final class GreatHousesDelegate: BaseViewControllerDelegate<House>, UITableViewD
             
                 let vc = HouseViewController(model: house)
                 nav.pushViewController(vc, animated: true)
+        }
+    }
+}
+
+// Creo el delegado para Seasons
+final class SeasonsDelegate: BaseViewControllerDelegate<Season>, UITableViewDelegate{
+    
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        if let season = source?.element(atIndexPath: indexPath),
+            let nav = viewController?.navigationController{
+            
+            let vc = SeasonViewController(model: season)
+            nav.pushViewController(vc, animated: true)
+        }
+    }
+}
+
+// Creo el delegado para Epidoses
+final class EpisodesDelegate: BaseViewControllerDelegate<Episode>, UITableViewDelegate{
+    
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        if let episode = source?.element(atIndexPath: indexPath),
+            let nav = viewController?.navigationController{
+            
+            let vc = EpisodeViewController(model: episode)
+            nav.pushViewController(vc, animated: true)
         }
     }
 }
