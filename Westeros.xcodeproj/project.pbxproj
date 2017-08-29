@@ -19,6 +19,8 @@
 		5D2508CB1F51B6E600B1CFA9 /* house_frey.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D2508C41F51B6E600B1CFA9 /* house_frey.png */; };
 		5D2508F51F54C3E500B1CFA9 /* ArrayDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D2508F41F54C3E500B1CFA9 /* ArrayDataSource.swift */; };
 		5D2508F81F54CC9100B1CFA9 /* DataSources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D2508F71F54CC9100B1CFA9 /* DataSources.swift */; };
+		5D2508FA1F55D85000B1CFA9 /* ArrayTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D2508F91F55D85000B1CFA9 /* ArrayTableViewController.swift */; };
+		5D2508FC1F55D8F500B1CFA9 /* Delegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D2508FB1F55D8F500B1CFA9 /* Delegates.swift */; };
 		5D3280A11F47621D00E274B6 /* EpisodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3280A01F47621D00E274B6 /* EpisodeTests.swift */; };
 		5D3280A31F47681C00E274B6 /* Episode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3280A21F47681C00E274B6 /* Episode.swift */; };
 		5D3280A61F4A369B00E274B6 /* SeasonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3280A41F4A369B00E274B6 /* SeasonViewController.swift */; };
@@ -80,6 +82,8 @@
 		5D2508C41F51B6E600B1CFA9 /* house_frey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = house_frey.png; sourceTree = "<group>"; };
 		5D2508F41F54C3E500B1CFA9 /* ArrayDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ArrayDataSource.swift; path = ../ArrayDataSource.swift; sourceTree = "<group>"; };
 		5D2508F71F54CC9100B1CFA9 /* DataSources.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSources.swift; sourceTree = "<group>"; };
+		5D2508F91F55D85000B1CFA9 /* ArrayTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayTableViewController.swift; sourceTree = "<group>"; };
+		5D2508FB1F55D8F500B1CFA9 /* Delegates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Delegates.swift; sourceTree = "<group>"; };
 		5D3280A01F47621D00E274B6 /* EpisodeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EpisodeTests.swift; sourceTree = "<group>"; };
 		5D3280A21F47681C00E274B6 /* Episode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Episode.swift; sourceTree = "<group>"; };
 		5D3280A41F4A369B00E274B6 /* SeasonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeasonViewController.swift; sourceTree = "<group>"; };
@@ -153,6 +157,8 @@
 			children = (
 				5D2508F41F54C3E500B1CFA9 /* ArrayDataSource.swift */,
 				5D2508F71F54CC9100B1CFA9 /* DataSources.swift */,
+				5D2508F91F55D85000B1CFA9 /* ArrayTableViewController.swift */,
+				5D2508FB1F55D8F500B1CFA9 /* Delegates.swift */,
 			);
 			name = Generics;
 			sourceTree = "<group>";
@@ -398,6 +404,7 @@
 				5D8FD6921F0ECD9D00BC14E7 /* Person.swift in Sources */,
 				5D8FD6881F0EC23900BC14E7 /* House.swift in Sources */,
 				5D7B7AFE1F431552006C25B3 /* Season.swift in Sources */,
+				5D2508FC1F55D8F500B1CFA9 /* Delegates.swift in Sources */,
 				ED853EE81F0C47E100F04AD6 /* AppDelegate.swift in Sources */,
 				5D7F71C81F1412C600F8FA39 /* HouseViewController.swift in Sources */,
 				5D3280AE1F4CA7F600E274B6 /* EpisodesTableViewController.swift in Sources */,
@@ -406,6 +413,7 @@
 				5DE8B4A41F4F3274002A31FE /* EpisodeViewController.swift in Sources */,
 				5D01F0AF1F15622800EF0EA3 /* Repository.swift in Sources */,
 				5DE685421F1E79EE000325A4 /* WikiViewController.swift in Sources */,
+				5D2508FA1F55D85000B1CFA9 /* ArrayTableViewController.swift in Sources */,
 				5DE6854A1F1E8609000325A4 /* PersonsTableViewController.swift in Sources */,
 				5D3280A61F4A369B00E274B6 /* SeasonViewController.swift in Sources */,
 			);

@@ -11,7 +11,7 @@ import UIKit
 final class DataSources{
     // Creamos las funciones que devuelven los ArrayDataSources del Element(House, person) que necesitamos
     // En esta clase se agrupan estas funciones
-    static func housesDataSources(model: [House]) -> ArrayDataSource<House>{
+    static func houseDataSources(model: [House]) -> ArrayDataSource<House>{
         return ArrayDataSource(model: model, cellMaker: { (house: House, tableView: UITableView) -> UITableViewCell in
             
             // Creo la ID de la celda
