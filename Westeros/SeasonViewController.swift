@@ -65,7 +65,16 @@ class SeasonViewController: UIViewController {
     @objc func displayEpisodes(){
         // Aqui hago la funcionalidad para mostrar episodios
         // Creo un EpisodesTableViewController
-        let episodeVC = EpisodesTableViewController(model: model.sortedEpisodes())
+        // Primero creamos un DataSource de Episodes
+        let episodeDataSource = DataSources.episodeDataSources(model: model.sortedEpisodes())
+        
+        // Creamos un PersonsVC
+        let episodeVC = ArrayTableViewController(dataSource: episodeDataSource,
+                                                 delegate: EpisodesDelegate(),
+                                                 title: "Episodes",
+                                                 style: .plain)
+        
+        //let episodeVC = EpisodesTableViewController(model: model.sortedEpisodes())
         
         // lo cargamos
         navigationController?.pushViewController(episodeVC, animated: true)

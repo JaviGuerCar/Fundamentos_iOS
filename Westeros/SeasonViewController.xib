@@ -22,38 +22,36 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Season" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JVW-GF-4b3">
-                    <rect key="frame" x="20" y="65" width="335" height="44"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="44" id="HMH-RP-YOv"/>
-                        <constraint firstAttribute="width" constant="335" id="iqx-Jy-63G"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="30"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y9f-DF-jka">
-                    <rect key="frame" x="20" y="107" width="335" height="24"/>
-                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="m7c-Y9-U0u">
-                    <rect key="frame" x="16" y="139" width="339" height="482"/>
-                </imageView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="DGf-uE-U34">
+                    <rect key="frame" x="20" y="58" width="335" height="550"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Season" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JVW-GF-4b3">
+                            <rect key="frame" x="0.0" y="0.0" width="335" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="HMH-RP-YOv"/>
+                                <constraint firstAttribute="width" constant="335" id="iqx-Jy-63G"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="30"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y9f-DF-jka">
+                            <rect key="frame" x="0.0" y="44" width="335" height="24"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="m7c-Y9-U0u">
+                            <rect key="frame" x="0.0" y="68" width="335" height="482"/>
+                        </imageView>
+                    </subviews>
+                </stackView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="Y9f-DF-jka" firstAttribute="top" secondItem="JVW-GF-4b3" secondAttribute="bottom" constant="-2" id="0FZ-db-0hF"/>
-                <constraint firstItem="Y9f-DF-jka" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="5Cu-s5-Ihm"/>
-                <constraint firstAttribute="trailing" secondItem="JVW-GF-4b3" secondAttribute="trailing" constant="20" id="7DW-28-0uj"/>
-                <constraint firstItem="JVW-GF-4b3" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="C0s-3a-dnF"/>
-                <constraint firstAttribute="trailing" secondItem="Y9f-DF-jka" secondAttribute="trailing" constant="20" id="PxF-UT-C34"/>
-                <constraint firstItem="m7c-Y9-U0u" firstAttribute="top" secondItem="Y9f-DF-jka" secondAttribute="bottom" constant="8" id="Sfg-Rg-TVd"/>
-                <constraint firstItem="m7c-Y9-U0u" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="TpY-fI-CdB"/>
-                <constraint firstAttribute="bottom" secondItem="m7c-Y9-U0u" secondAttribute="bottom" constant="46" id="ccp-yI-5sd"/>
-                <constraint firstItem="JVW-GF-4b3" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="65" id="kM2-lS-3Bj"/>
-                <constraint firstAttribute="trailing" secondItem="m7c-Y9-U0u" secondAttribute="trailing" constant="20" id="zuV-j5-79a"/>
+                <constraint firstItem="DGf-uE-U34" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="ZZV-6Q-BZX"/>
+                <constraint firstItem="DGf-uE-U34" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="58" id="odv-Tl-whr"/>
+                <constraint firstItem="DGf-uE-U34" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="yJx-3b-GsT"/>
             </constraints>
             <point key="canvasLocation" x="77.5" y="53.5"/>
         </view>

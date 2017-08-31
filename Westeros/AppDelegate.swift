@@ -40,8 +40,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                                                  title: "Seasons",
                                                  style: .plain).wrappedInNavigation()
         
-        //let seasonsVC = SeasonsTableViewController(model: seasons).wrappedInNavigation()
-        
+        // Creamos los botones de los TabBar
+        housesVC.tabBarItem = UITabBarItem(title: "Houses", image: #imageLiteral(resourceName: "house_icon.png"), selectedImage: nil)
+        seasonsVC.tabBarItem = UITabBarItem(title: "Seasons", image: #imageLiteral(resourceName: "season_icon.png"), selectedImage: nil)
         
         // Creamos el TabBar
         let tabVC = UITabBarController()
